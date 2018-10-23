@@ -16,7 +16,7 @@ spec:
   selector:
     app: basic
     release: basic
-  type: ClusterIP
+  type: NodePort
 ---
 apiVersion: apps/v1beta2
 kind: Deployment
