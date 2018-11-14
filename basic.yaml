@@ -16,7 +16,7 @@ spec:
   selector:
     app: basic
     release: basic
-  type: NodePort
+  type: LoadBalancer
 ---
 apiVersion: apps/v1beta2
 kind: Deployment
