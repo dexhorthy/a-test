@@ -5,7 +5,7 @@ serviceAccount:
   create: true
   name:
 
-replicas: 2
+replicas: 3
 
 deploymentStrategy: RollingUpdate
 
