@@ -6,7 +6,7 @@ metadata:
   labels:
     app: postgresql
     chart: postgresql-2.6.6
-    release: "postgres"
+    release: postgresql"
     heritage: "Tiller"
 spec:
   type: ClusterIP
@@ -17,7 +17,7 @@ spec:
     targetPort: postgresql
   selector:
     app: postgresql
-    release: "postgres"
+    release: postgresql"
 
 ---
 # Source: postgresql/templates/svc.yaml
@@ -28,7 +28,7 @@ metadata:
   labels:
     app: postgresql
     chart: postgresql-2.6.6
-    release: "postgres"
+    release: postgresql"
     heritage: "Tiller"
 spec:
   type: ClusterIP
@@ -38,5 +38,5 @@ spec:
     targetPort: postgresql
   selector:
     app: postgresql
-    release: "postgres"
+    release: postgresql"
     role: master

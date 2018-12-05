@@ -6,7 +6,7 @@ metadata:
   labels:
     app: postgresql
     chart: postgresql-2.6.6
-    release: "postgres"
+    release: postgresql"
     heritage: "Tiller"
 spec:
   serviceName: postgresql-postgresql-headless
@@ -16,7 +16,7 @@ spec:
   selector:
     matchLabels:
       app: postgresql
-      release: "postgres"
+      release: postgresql"
       role: master
   template:
     metadata:
@@ -24,7 +24,7 @@ spec:
       labels:
         app: postgresql
         chart: postgresql-2.6.6
-        release: "postgres"
+        release: postgresql"
         heritage: "Tiller"
         role: master
     spec:

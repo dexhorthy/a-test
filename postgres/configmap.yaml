@@ -6,7 +6,7 @@ metadata:
   labels:
     app: postgresql
     chart: postgresql-2.6.6
-    release: "postgres"
+    release: postgresql"
     heritage: "Tiller"
 data:
   README.md: |-
