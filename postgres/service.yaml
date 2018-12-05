@@ -1,15 +1,13 @@
-# Source: postgresql/templates/svc-headless.yaml
 apiVersion: v1
 kind: Service
 metadata:
-  name: postgresql-postgresql-headless
   labels:
     app: postgresql
     chart: postgresql-2.6.6
-    release: postgresql"
-    heritage: "Tiller"
+    heritage: Tiller
+    release: postgresql
+  name: postgresql-postgresql-headless
 spec:
-  type: ClusterIP
   clusterIP: None
   ports:
   - name: postgresql
@@ -17,26 +15,25 @@ spec:
     targetPort: postgresql
   selector:
     app: postgresql
-    release: postgresql"
-
+    release: postgresql
+  type: ClusterIP
 ---
-# Source: postgresql/templates/svc.yaml
 apiVersion: v1
 kind: Service
 metadata:
-  name: postgresql-postgresql
   labels:
     app: postgresql
     chart: postgresql-2.6.6
-    release: postgresql"
-    heritage: "Tiller"
+    heritage: Tiller
+    release: postgresql
+  name: postgresql-postgresql
 spec:
-  type: ClusterIP
   ports:
   - name: postgresql
-    port:  5432
+    port: 5432
     targetPort: postgresql
   selector:
     app: postgresql
-    release: postgresql"
+    release: postgresql
     role: master
+  type: ClusterIP
